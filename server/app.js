@@ -15,9 +15,11 @@ app.post('/compareDates', async (req, res) => {
         res.json({ difference: result });
     } catch (error) {
         console.error("Error comparing dates:", error);
-        res.status(500).send("Internal Server Error");
+        res.status(400).send(error.message);
     }
 });
+
+
 
 app.post('/convertTimeZone', async (req, res) => {
     const { date, timezone } = req.body;

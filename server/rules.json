@@ -3,33 +3,19 @@
     "conditions": {
       "all": [
         {
-          "fact": "timezone",
-          "operator": "equal",
-          "value": "Asia/Kolkata"
+          "fact": "date1",
+          "operator": "greaterThanInclusive",
+          "value": {
+            "fact": "date2",
+            "path": "$"
+          }
         }
       ]
     },
     "event": {
-      "type": "convert-timezone",
+      "type": "date-comparison-valid",
       "params": {
-        "convertedDate": "Converted to Asia/Kolkata Time Zone"
-      }
-    }
-  },
-  {
-    "conditions": {
-      "all": [
-        {
-          "fact": "timezone",
-          "operator": "equal",
-          "value": "Europe/London"
-        }
-      ]
-    },
-    "event": {
-      "type": "convert-timezone",
-      "params": {
-        "convertedDate": "Converted to Europe/London Time Zone"
+        "message": "date1 is not earlier than date2"
       }
     }
   }
