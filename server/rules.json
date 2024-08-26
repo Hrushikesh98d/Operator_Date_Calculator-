@@ -1,0 +1,36 @@
+[
+  {
+    "conditions": {
+      "all": [
+        {
+          "fact": "timezone",
+          "operator": "equal",
+          "value": "Asia/Kolkata"
+        }
+      ]
+    },
+    "event": {
+      "type": "convert-timezone",
+      "params": {
+        "convertedDate": "Converted to Asia/Kolkata Time Zone"
+      }
+    }
+  },
+  {
+    "conditions": {
+      "all": [
+        {
+          "fact": "timezone",
+          "operator": "equal",
+          "value": "Europe/London"
+        }
+      ]
+    },
+    "event": {
+      "type": "convert-timezone",
+      "params": {
+        "convertedDate": "Converted to Europe/London Time Zone"
+      }
+    }
+  }
+]
